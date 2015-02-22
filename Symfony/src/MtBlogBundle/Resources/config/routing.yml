@@ -1,0 +1,30 @@
+mt_blog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MtBlogBundle:Default:index }
+mt_blog_accueil:
+    path:     /accueil
+    defaults: { _controller: MtBlogBundle:Blog:index }
+mt_blog_comparer:
+    path:     /render/{a}/{b}
+    defaults: { _controller: MtBlogBundle:Blog:render }
+mt_blog_switchcase:
+    path:     /sc/{a}/{b}/{c}
+    defaults: { _controller: MtBlogBundle:Blog:switchcase }
+mt_blog_bdd:
+    path:     /doc
+    defaults: { _controller: MtBlogBundle:Blog:create }
+mt_blog_calc:
+    path:     /calculer
+    defaults: { _controller: MtBlogBundle:Blog:calcule }
+mt_blog_calcok:
+    path:     /calculer/{a}
+    defaults: { _controller: MtBlogBundle:Blog:calcule }
+mt_blog_form:
+    path:     /form
+    defaults: { _controller: MtBlogBundle:Blog:formulaire }
+mt_blog_grade:
+    path:     /grade
+    defaults: { _controller: MtBlogBundle:Blog:createGrade }
+mt_blog_censor:
+    path:     /censor
+    defaults: { _controller: MtBlogBundle:Blog:formulaireGrade }

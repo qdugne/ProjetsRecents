@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mon Site avec twig</title>
+	</head>
+	<body>
+		<h1>Bonjour ceci est mon site avec twig</h1>
+		<p>Merci de visiter mon site, Il a été conçu uniquement pour tester les fonctionnalités du moteur twig. Je vais aussi mettre UTF-8 sans BOM
+		</p>
+		{% if (c=="add") %}
+			<p>la solution est {{ a + b}}</p>
+		{% elseif (c=="sou") %}
+			<p>la solution est {{ a - b }}</p>
+		{% elseif (c=="mul") %}
+			<p>la solution est {{ a * b }}</p>
+		{% elseif (c=="div") %}
+			{% if (b==0) %}	
+			<p>	division par 0 impossible</p>
+		{% else  %}
+			la solution est {{ a / b }}
+		{% endif %}	
+		{% else  %}
+			<p>erreur veuillez spécifier un opérateur: add, mul, sou, div</p>
+		{% endif %}		
+		<p>en php</p>
+		{{ rep }}
+	</body>
+</html>
